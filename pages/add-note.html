@@ -3,24 +3,28 @@
 
 <head>
 	<title>Adding a new note</title>
-	<meta charset="utf-8"  />
+    <meta charset="utf-8"  />
+    <link rel="stylesheet" href="../pages/scripts/base-style.css" type="text/css"/>
+    <link rel="stylesheet" href="../pages/scripts/new-note-style.css" type="text/css"/>
 </head>
 
 <body>
     <header>
         <h1>Personal TODO-List</h1>
         <nav>
-            <p><a href="../pages/index.html">Home Page</a></p>
-            <p><a href="../pages/my-notes.html">My Notes</a></p>
-            <p><a href="../pages/add-note.html">Adding New Note</a></p>
-            <p><a href="../pages/about.html">About</a><p>
+            <ul>
+                <li><a href="../pages/index.html">Home Page</a></li>
+                <li><a href="../pages/my-notes.html">My Notes</a></li>
+                <li><a href="../pages/add-note.html">Adding New Note</a></li>
+                <li><a href="../pages/about.html">About</a></li>
+            </ul>
         </nav>
     </header>
     <main>
         <fieldset>
             <legend>Создание цели(задачи)</legend>
-            <p><label for="name">Название<em>* </em></label><input type="text" id="name"></p>
-            <p>
+            <p class="inputs"><label for="name">Название<em>* </em></label><input type="text" id="name"></p>
+            <p class="inputs">
                 <label>Категория<em>* </em></label>
                 <select>
                     <option value="test1">Test Option#1</option>
@@ -28,25 +32,25 @@
                     <option value="test3">Test Option#3</option>
                 </select>
             </p>
-            <p><label for="description">Описание </label><textarea id="description"></textarea></p>
-            <p><label for="deadlineDate">Крайний срок выполнения<em>* </em></label><input type="datetime-local" id="deadlineDate"></p>
+            <p class="inputs"><label for="description">Описание </label><textarea id="description"></textarea></p>
+            <p class="inputs"><label for="deadlineDate">Крайний срок выполнения<em>* </em></label><input type="datetime-local" id="deadlineDate"></p>
             
-            <fieldset>
+            <fieldset id="stepsFieldset">
                 Шаги выполнения:
                 <div id="steps">
                         
                 </div>
-                <p><label for="stepName">Описание шага выполнения<em>* </em></label><input type="text" id="stepName"></p>
-                <p><label for="stepComment">Комментарий<em>* </em></label><textarea id="stepComment"></textarea></p>
-                <p><label for="stepDeadlineDate">Крайний срок выполнения<em>* </em></label><input type="datetime-local" id="stepDeadlineDate"></p>
-                <p><input type="submit" value="Добавить шаг выполнения"</p>
+                <p class="inputs"><label for="stepName">Описание шага выполнения<em>* </em></label><input type="text" id="stepName"></p>
+                <p class="inputs"><label for="stepComment">Комментарий<em>* </em></label><textarea id="stepComment"></textarea></p>
+                <p class="inputs"><label for="stepDeadlineDate">Крайний срок выполнения<em>* </em></label><input type="datetime-local" id="stepDeadlineDate"></p>
+                <p class="inputs"><input type="submit" value="Добавить шаг выполнения"</p>
             </fieldset>  
         </fieldset>
-        <p><input type="submit" value="Создать"></p>
+        <p><input id="createButton" type="submit" value="Создать"></p>
     </main>
-     <footer>
-         <address>https://github.com/petrChe</address>
-         <p>&copy; 2018 petrChe</p>
-     </footer>
+    <footer>
+        <address>https://github.com/petrChe</address>
+        <p>&copy; 2018 petrChe</p>
+    </footer>
 </body>
 </html>

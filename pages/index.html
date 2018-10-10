@@ -3,20 +3,24 @@
 
 <head>
 	<title>Home Page</title>
-	<meta charset="utf-8"  />
+    <meta charset="utf-8"  />
+    <link rel="stylesheet" href="../pages/scripts/base-style.css" type="text/css" />
 </head>
 
 <body>
     <header>
         <h1>Personal TODO-List</h1>
         <nav>
-            <p><a href="../pages/index.html">Home Page</a></p>
-            <p><a href="../pages/my-notes.html">My Notes</a></p>
-            <p><a href="../pages/add-note.html">Adding New Note</a></p>
-            <p><a href="../pages/about.html">About</a><p>
+            <ul>
+                <li><a href="../pages/index.html">Home Page</a></li>
+                <li><a href="../pages/my-notes.html">My Notes</a></li>
+                <li><a href="../pages/add-note.html">Adding New Note</a></li>
+                <li><a href="../pages/about.html">About</a></li>
+            </ul>
         </nav>
     </header>
     <main>
+        <br><br>
         Добро пожаловать Петр!
         <mark>У вас имеются не выполненые задачи в количестве - {uncompletedTaskNumber}</mark>
         <br>
@@ -28,7 +32,7 @@
     </main>
      <footer>
          <address>https://github.com/petrChe</address>
-         <p>&copy; 2018 petrChe</p>
+         <p id="copyright">&copy; 2018 petrChe</p>
      </footer>
 </body>
 </html>
