@@ -4,21 +4,12 @@
 <head>
 	<title>Home Page</title>
     <meta charset="utf-8"  />
-    <link rel="stylesheet" href="../pages/scripts/base-style.css" type="text/css" />
+    <link rel="stylesheet" href="../pages/styles/base-style.css" type="text/css" />
+    <script src="../pages/scripts/base-script.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <h1>Personal TODO-List</h1>
-        <nav>
-            <ul>
-                <li><a href="../pages/index.html">Home Page</a></li>
-                <li><a href="../pages/my-notes.html">My Notes</a></li>
-                <li><a href="../pages/add-note.html">Adding New Note</a></li>
-                <li><a href="../pages/about.html">About</a></li>
-            </ul>
-        </nav>
-    </header>
+    <header id="header"></header>
     <main>
         <br><br>
         Добро пожаловать Петр!
@@ -27,12 +18,9 @@
         <p>Не забывай выполнять свои задачи в срок!</p>
         <blockquote>
             <p>Когда-то «сегодня» тоже называлось «завтра».</p>
-            <footer>— <span>Чья-то интересная фраза</span></footer>
+            <footer id="quoteAuthor">— <span>Чья-то интересная фраза</span></footer>
             </blockquote>
     </main>
-     <footer>
-         <address>https://github.com/petrChe</address>
-         <p id="copyright">&copy; 2018 petrChe</p>
-     </footer>
+    <footer id="footer"></footer>
 </body>
 </html>

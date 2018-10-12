@@ -10,12 +10,12 @@ main
     font-family: Arial, Helvetica, sans-serif;
 }
 
-header
+#header
 {
     background-color:  #A3D9FF;
 }
 
-header > h1
+#header > h1
 {
     width: 350px;
     overflow: hidden;
@@ -50,7 +50,7 @@ nav ul li:hover
     background-color:#4381C1;
 }
 
-footer
+#footer
 {
     position: absolute;
     bottom: 0;
@@ -59,7 +59,7 @@ footer
     background-color: #5B616A;
 }
 
-footer > *
+#footer > *
 {
     color: #FCF7F8;
     text-align: center;
