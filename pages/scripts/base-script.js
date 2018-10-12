@@ -28,7 +28,10 @@ var headerMenuData =
         
     function createHeader(headerMenuItems) {
         return `
-        <h1>Personal TODO-List</h1>
+        <div id="logo">
+            <p>TODO-List </p>
+            <img id="logoImg" src="../pages/images/checkmark.png" alt="logo">
+        </div>
         <nav>
         <ul>     
             ${headerMenuItems.map((menuItem, index) => 

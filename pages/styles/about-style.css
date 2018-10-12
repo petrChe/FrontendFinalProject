@@ -14,3 +14,10 @@ th
     background: lightblue;
     border: white;
 }
+
+.colomnTitle
+{
+    color:white;
+    font-family: "Whitney Cond A", "Whitney Cond B", "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
+    font-weight: bold;
+}

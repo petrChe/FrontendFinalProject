@@ -6,21 +6,36 @@
 
 main
 {
+    min-height: calc(100vh - 70px);
     margin-left: 25px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Whitney Cond A", "Whitney Cond B", "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
 }
 
 #header
 {
     background-color:  #A3D9FF;
+    height: 68px;
 }
 
-#header > h1
+#header > #logo
 {
     width: 350px;
-    overflow: hidden;
     float: left;
-    color:#FCF7F8; 
+}
+
+#header > #logo *
+{
+    overflow: hidden;
+    color:#FCF7F8;
+    display: inline-block; 
+}
+
+#header > #logo p
+{
+    font-family: "Whitney Cond A", "Whitney Cond B", "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
+    font-weight: bold;
+    font-size: 2.6rem;
+    margin-left: 10px;
 }
 
 nav
@@ -37,12 +52,15 @@ nav ul li
     display: inline-block;
     padding: 14px 16px;
     text-align: center;
+    margin-top: 15px;
 }
 
 nav ul li a
 {
     color:white;
     text-decoration: none !important;
+    font-family: "Whitney Cond A", "Whitney Cond B", "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
+    font-weight: bold;
 }
 
 nav ul li:hover
@@ -52,7 +70,6 @@ nav ul li:hover
 
 #footer
 {
-    position: absolute;
     bottom: 0;
     width: 100%;
     height: 55px;
@@ -63,4 +80,129 @@ nav ul li:hover
 {
     color: #FCF7F8;
     text-align: center;
+}
+
+#quoteContainer
+{
+    height: 500px;
+}
+
+
+/*logo icon transformation*/
+#logoImg
+{
+    -webkit-transition: all 1.5s ease;
+    -moz-transition: all 1.5s ease;
+    -o-transition: all 1.5s ease;
+    -ms-transition: all 1.5s ease;
+    transition: all 1.5s ease;
+}
+
+#logoImg:hover
+{
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+/*Image frames on the main page*/
+
+#firstRow > div
+{
+    display: inline-block;
+    margin: 20px 20px 20px 20px;
+}
+
+#secondRow > div
+{
+    display: inline-block;
+    margin: 20px 20px 20px 20px;
+}
+
+.homePageImg
+{
+    width: 250px;
+    height: 250px;
+}
+
+
+.frontImg
+{
+    width: inherit;
+    height: inherit;
+}
+
+.frontImgTitle
+{
+    color: white;
+    font-family: "Whitney Cond A", "Whitney Cond B", "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
+    font-weight: 700;
+}
+
+.homePageImgInner
+{
+    width: inherit;
+    height: inherit;
+    transform-style: preserve-3d;
+    transition: all 0.8s linear;
+}
+
+.homePageImg:hover .homePageImgInner
+{
+    transform: rotateY(180deg);
+}
+
+.front
+{
+    position: absolute;
+    backface-visibility: hidden;
+    z-index: 5;
+    width: inherit;
+    height: inherit;
+}
+
+.back
+{
+    position: absolute;
+    backface-visibility: hidden;
+    width: inherit;
+    height: inherit;
+    background-color: rgb(212, 206, 206);
+    color: gray;
+    transform: rotateY(180deg);
+}
+
+.titleform
+{
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color:black;
+    opacity: 0.7;
+}
+
+
+
+.topPart
+{
+    height: 30%;
+    background-color: #F4F4F4;
+    color:#939393;
+    text-align: center;
+    padding-top: 5px;
+    font-family: "Whitney Cond A", "Whitney Cond B", "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
+    font-size: 1.1rem;
+}
+
+.bottomPart
+{
+    height: 70%;
+    background-color: #939393;
+    color:white;
+    text-align: center;
+    padding-top: 5px;
+    font-family: "Whitney Cond A", "Whitney Cond B", "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
+    font-size: 0.8rem;
 }
