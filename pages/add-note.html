@@ -13,31 +13,17 @@
     <header id="header"></header>
     <main>
         <fieldset>
-            <legend>Создание цели(задачи)</legend>
-            <p class="inputs"><label for="name">Название<em>* </em></label><input type="text" id="name"></p>
-            <p class="inputs">
-                <label>Категория<em>* </em></label>
-                <select>
-                    <option value="test1">Test Option#1</option>
-                    <option value="test2">Test Option#2</option>
-                    <option value="test3">Test Option#3</option>
-                </select>
-            </p>
-            <p class="inputs"><label for="description">Описание </label><textarea id="description"></textarea></p>
-            <p class="inputs"><label for="deadlineDate">Крайний срок выполнения<em>* </em></label><input type="datetime-local" id="deadlineDate"></p>
-            
-            <fieldset id="stepsFieldset">
-                Шаги выполнения:
-                <div id="steps">
-                        
-                </div>
-                <p class="inputs"><label for="stepName">Описание шага выполнения<em>* </em></label><input type="text" id="stepName"></p>
-                <p class="inputs"><label for="stepComment">Комментарий<em>* </em></label><textarea id="stepComment"></textarea></p>
-                <p class="inputs"><label for="stepDeadlineDate">Крайний срок выполнения<em>* </em></label><input type="datetime-local" id="stepDeadlineDate"></p>
-                <p class="inputs"><input type="submit" value="Добавить шаг выполнения"</p>
-            </fieldset>  
+            <legend>Add New Task</legend>
+            <input type="text" id="name"/>
+
+            <p>When</p>
+            <div class="task-deadline-buttons">
+                <input id="today-button" type="submit" value="Today">
+                <input id="tomorrow-button" type="submit" value="Tomorrow">
+                <input id="other-day-button" type="submit" value="Other day">
+            </div>
         </fieldset>
-        <p><input id="createButton" type="submit" value="Создать"></p>
+        <p><input id="createButton" type="submit" value="Add Now"></p>
     </main>
     <footer id="footer"></footer>
 </body>

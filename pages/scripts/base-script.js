@@ -46,5 +46,7 @@ var headerMenuData =
       function createFooter() {
           return `
           <address>https://github.com/petrChe</address>
-          <p>&copy; 2018 petrChe</p>       
+          <p>&copy; 2018 petrChe</p>
+          <p><a href="https://icons8.com">Icon pack by Icons8</a></p>
+          <p><a href='https://www.freepik.com/free-vector/abstract-low-poly-mesh-background-design_1765628.htm'>Designed by Kjpargeter</a></p>  
           `};
