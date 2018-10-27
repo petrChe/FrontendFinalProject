@@ -7,14 +7,6 @@ var headerMenuData =
             {
                 MenuItemName: "My Notes",
                 MenuItemPath: "../pages/my-notes.html"
-            },
-            {
-                MenuItemName: "Adding New Note",
-                MenuItemPath: "../pages/add-note.html"
-            },
-            {
-                MenuItemName: "About",
-                MenuItemPath: "../pages/about.html"
             }
     ];
 
@@ -28,9 +20,9 @@ var headerMenuData =
         
     function createHeader(headerMenuItems) {
         return `
-        <div id="logo">
+        <div class="logo">
             <p>TODO-List </p>
-            <img id="logoImg" src="../pages/images/checkmark.png" alt="logo">
+            <img class="logoImg" src="../pages/images/checkmark.png" alt="logo">
         </div>
         <nav>
         <ul>     

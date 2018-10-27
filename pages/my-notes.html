@@ -11,26 +11,42 @@
 <body>
     <header id="header"></header>
     <main>
-        Мои цели(задачи)
+        My tasks
         <div id="tasks">
             <ul>
                 <li>
-                    <div>Задача1</div>
+                    <div>Task#1</div>
                 </li>
                 <li>
-                    <div>Задача2</div>
+                    <div>Task#2</div>
                 </li>
                 <li>
-                    <div>Задача3</div>
+                    <div>Task#3</div>
                 </li>
                 <li>
-                    <div>Задача4</div>
+                    <div>Task#4</div>
                 </li>
                 <li>
-                    <div>Задача5</div>
+                    <div>Task#5</div>
                 </li>
             </ul>
         </div>
+
+        <div class="adding-new-task">
+        <fieldset>
+                <legend>Add New Task</legend>
+                <input type="text" id="name"/>
+    
+                <p>When</p>
+                <div class="task-deadline-buttons">
+                    <input type="submit" value="Today">
+                    <input type="submit" value="Tomorrow">
+                    <input id="other-day-button" type="submit" value="Other day">
+                </div>
+                <br>
+                <p><input id="createButton" type="submit" value="Add Now"></p>
+        </fieldset>
+    </div>
     </main>
     <footer id="footer"></footer>
 </body>
