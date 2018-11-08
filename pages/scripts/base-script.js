@@ -15,7 +15,7 @@ var headerMenuData =
         headerContent.innerHTML = headerMarkup;
 
         var footerMarkup = createFooter();
-        var footer = document.getElementById("footer");
+        var footer = document.getElementById('footer');
         footer.innerHTML = footerMarkup;
         
     function createHeader(headerMenuItems) {

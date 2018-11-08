@@ -101,7 +101,6 @@ main
 .tile-list-section
 {
     /*position: relative;*/
-    justify-content: center;
     background-image: url("../images/tiles-background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -229,6 +228,16 @@ main
 .author-aside ul 
 {
     list-style: none;
+}
+
+.video-form
+{
+    text-align: center;
+}
+
+.video-form p
+{
+    font-size: 3rem;
 }
 
 /*footer*/
