@@ -7,6 +7,10 @@ var headerMenuData =
             {
                 MenuItemName: "My Notes",
                 MenuItemPath: "../pages/my-notes.html"
+            },
+            {
+                MenuItemName: "Used Technologies",
+                MenuItemPath: "../pages/technologies.html"
             }
     ];
 

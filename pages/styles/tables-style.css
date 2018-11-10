@@ -1,6 +1,8 @@
 table
 {
     border-spacing: 0.5rem;
+    width: 850px;
+    height: 500px;
 }
 
 td, th

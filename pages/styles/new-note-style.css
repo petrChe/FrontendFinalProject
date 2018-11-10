@@ -1,14 +1,11 @@
-.inputs
-{
+.inputs {
     padding: 5px 5px 5px 5px;
 }
 
-#createButton
-{
+#createButton {
     margin-top: 5px;
 }
 
-#stepsFieldset
-{
+#stepsFieldset {
     margin: 20px 35px 20px 35px;
 }

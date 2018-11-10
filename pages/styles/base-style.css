@@ -1,31 +1,28 @@
 @import url("normalize.css");
-@import url("tables-style.css");
 @import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
 @import url('https://fonts.googleapis.com/css?family=Concert+One');
 
-*
-{
+* {
     padding: 0px;
     margin: 0px;
 }
 
 /*header*/
-#header
-{
+#header {
+    display: flex;
+    flex-flow: row wrap;
     background-color:  #A3D9FF;
     color:#FCF7F8;
     height: 68px;
 }
 
 /*header logo*/
-#header > .logo
-{
+#header > .logo {
     width: 350px;
     float: left;
 }
 
-#header > .logo *
-{
+#header > .logo * {
     overflow: hidden;
     display: inline-block; 
     font-family: 'Luckiest Guy', cursive;
@@ -35,8 +32,7 @@
 }
 
 /*logo icon transformation*/
-.logoImg
-{
+.logoImg {
     -webkit-transition: all 1.5s ease;
     -moz-transition: all 1.5s ease;
     -o-transition: all 1.5s ease;
@@ -44,8 +40,7 @@
     transition: all 1.5s ease;
 }
 
-.logoImg:hover
-{
+.logoImg:hover {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
     -o-transform: rotate(360deg);
@@ -54,53 +49,51 @@
 }
 
 /*header navigation*/
-nav
-{
+nav {
     margin: 0;
     padding: 0;
-    list-style: none;
-    overflow: hidden;
     background-color: #A3D9FF;
     font-family: 'Concert One', cursive;
 }
 
-nav ul li
-{
-    display: inline-block;
-    padding: 14px 16px;
-    text-align: center;
-    margin-top: 15px;
+nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
 }
 
-nav ul li a
-{
+nav ul li {
+    padding: 14px 16px;
+    margin-top: 22px;
+}
+
+nav ul li a {
     color:white;
     text-decoration: none !important;
 }
 
-nav ul li:hover
-{
+nav ul li:hover {
     background-color:#4381C1;
 }
 
 /*Main content*/
-main
-{
+main {
+    display: flex;
+    flex-flow: column nowrap;
     min-height: calc(100vh - 70px);
     font-family: 'Concert One', cursive;
 }
 
 /*Quote*/
-#quote-container
-{
+#quote-container {
     min-height: 100px;
     margin-left: 25px;
 }
 
 /*Image frames on the main page*/
-.tile-list-section
-{
-    /*position: relative;*/
+.tile-list-section {
+    display: flex;
+    flex-flow: column wrap;
     background-image: url("../images/tiles-background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -109,31 +102,26 @@ main
     color: white;
 }
 
-.tile-list-section .tile-section-text
-{
+.tile-list-section .tile-section-text {
     font-size: 75px;
 }
 
-.tile-list-first-row > div
-{
-    display: inline-block;
+.tile-list-first-row > div {
+    display: inline-flex;
     margin: 20px 20px 20px 20px;
 }
 
-.tile-list-second-row > div
-{
-    display: inline-block;
+.tile-list-second-row > div {
+    display: inline-flex;
     margin: 20px 20px 20px 20px;
 }
 
-.tile-wrap
-{
+.tile-wrap {
     width: 250px;
     height: 250px;
 }
 
-.tile-image
-{
+.tile-image {
     min-width: 100px;
     min-height: 100px;
     margin-left: auto;
@@ -143,15 +131,22 @@ main
     vertical-align: middle;
 }
 
-.tile-name
-{
+.tile-image {
+    shape-outside: url("../pages/images/manage-time-icon.png");
+    shape-image-threshold: 0.5;
+    float: left;
+    min-width: 100px;
+    min-height: 100px;
+}
+
+.tile-name {
     color: black;
     font-weight: 700;
     padding-top: 15px;
 }
 
-.tile-inner-wrap
-{
+.tile-inner-wrap {
+    position: relative;
     width: inherit;
     height: inherit;
     border: 1px solid gray;
@@ -159,13 +154,11 @@ main
     transition: all 0.8s linear;
 }
 
-.tile-wrap:hover .tile-inner-wrap
-{
+.tile-wrap:hover .tile-inner-wrap {
     transform: rotateY(180deg);
 }
 
-.tile-front-side
-{
+.tile-front-side {
     position: absolute;
     backface-visibility: hidden;
     background-color: white;
@@ -174,8 +167,15 @@ main
     height: inherit;
 }
 
-.tile-back-side
-{
+.shape-form {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.tile-back-side {
     position: absolute;
     backface-visibility: hidden;
     width: inherit;
@@ -185,17 +185,7 @@ main
     transform: rotateY(180deg);
 }
 
-.tile-name-wrap
-{
-    bottom: 8px;
-    opacity: 0.7;
-    text-align: center;
-    margin-top: 100px;
-    border-top: 1px solid gray;
-}
-
-.tile-back-top-part
-{
+.tile-back-top-part {
     height: 30%;
     background-color: #F4F4F4;
     color:#939393;
@@ -204,8 +194,7 @@ main
     font-size: 1.3rem;
 }
 
-.tile-back-bottom-part
-{
+.tile-back-bottom-part {
     height: 66%;
     background-color: #939393;
     color:white;
@@ -215,8 +204,7 @@ main
 }
 
 /*aside section*/
-.author-aside
-{
+.author-aside {
     width: 40%;
     padding-left: .5rem;
     margin-left: .5rem;
@@ -225,24 +213,21 @@ main
     box-shadow: inset 5px 0 5px -5px #29627e;
 }
 
-.author-aside ul 
-{
+.author-aside ul {
     list-style: none;
 }
 
-.video-form
-{
+.video-form {
     text-align: center;
 }
 
-.video-form p
-{
+
+.video-form p {
     font-size: 3rem;
 }
 
 /*footer*/
-#footer
-{
+#footer {
     bottom: 0;
     width: 100%;
     height: 75px;
