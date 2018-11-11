@@ -6,14 +6,15 @@
     <meta charset="utf-8"  />
     <link rel="stylesheet" href="../pages/styles/base-style.css" type="text/css"/>
     <script src="../pages/scripts/base-script.js" defer></script>
+    <script src="../pages/scripts/tasks-script.js" defer></script>
 </head>
 
 <body>
     <header id="header"></header>
     <main>
         My tasks
-        <div id="tasks">
-            <ul>
+        <div>
+            <ul id="tasksList">
                 <li>
                     <div>Task#1</div>
                 </li>
@@ -35,16 +36,20 @@
         <div class="adding-new-task">
         <fieldset>
                 <legend>Add New Task</legend>
-                <input type="text" id="name"/>
+                <div>
+                    <input type="text" id="taskName"/>
+                    <label id="deadlineLable"></label>
+                </div>
+
     
                 <p>When</p>
                 <div class="task-deadline-buttons">
-                    <input type="submit" value="Today">
-                    <input type="submit" value="Tomorrow">
-                    <input id="other-day-button" type="submit" value="Other day">
+                    <input id = "todayButton" type="submit" value="Today">
+                    <input id = "yesterdayButton" type="submit" value="Must be already done">
+                    <input id ="otherDayButton" type="submit" value="Other day">
                 </div>
                 <br>
-                <p><input id="createButton" type="submit" value="Add Now"></p>
+                <input id="createTaskButton" type="submit" value="Add Now">
         </fieldset>
     </div>
     </main>

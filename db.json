@@ -1,0 +1,33 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "tasks": [
+    {
+      "id": 1,
+      "taskName": "Test Task1",
+      "isDone": false,
+      "taskDeadline": null
+    },
+    {
+      "taskName": "Test Task2",
+      "taskDeadline": "10/11/2018",
+      "isDone": false,
+      "id": 2
+    }
+  ]
+}
