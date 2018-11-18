@@ -20,7 +20,7 @@
     {
       "id": 1,
       "taskName": "Test Task1",
-      "isDone": false,
+      "isDone": true,
       "taskDeadline": null
     },
     {

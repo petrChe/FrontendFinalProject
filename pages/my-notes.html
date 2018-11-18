@@ -5,6 +5,7 @@
 	<title>My notes</title>
     <meta charset="utf-8"  />
     <link rel="stylesheet" href="../pages/styles/base-style.css" type="text/css"/>
+    <link rel="stylesheet" href="../pages/styles/new-note-style.css" type="text/css"/>
     <script src="../pages/scripts/base-script.js" defer></script>
     <script src="../pages/scripts/tasks-script.js" defer></script>
 </head>
@@ -37,16 +38,26 @@
         <fieldset>
                 <legend>Add New Task</legend>
                 <div>
-                    <input type="text" id="taskName"/>
+                    <input type="text" id="taskName"
+                    required
+                    pattern="[a-zA-Z]{5,}"
+                    maxlength="30"/>
+                    <p id="taskError"></p>
                     <label id="deadlineLable"></label>
                 </div>
-
-    
+                <br> 
                 <p>When</p>
                 <div class="task-deadline-buttons">
                     <input id = "todayButton" type="submit" value="Today">
                     <input id = "yesterdayButton" type="submit" value="Must be already done">
                     <input id ="otherDayButton" type="submit" value="Other day">
+                    <div id="otherDayModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            Choose other date
+                            <input type="date" class="other-day"/>
+                        </div>
+                    </div>
                 </div>
                 <br>
                 <input id="createTaskButton" type="submit" value="Add Now">
