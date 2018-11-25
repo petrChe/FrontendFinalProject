@@ -2,22 +2,24 @@ const tasksUrl = "http://localhost:3000/tasks";
 var createTaskButton = document.getElementById("createTaskButton");
 var allTasks;
 var getAllTasks = function getAll() {
-    var getAllResponse = fetch(tasksUrl,
-        {
-            method: 'get'
-        })
-        .then((response) => response.json())
-        .then((res) => {
-            allTasks = JSON.parse(JSON.stringify(res));
-            fillTaskListUl(allTasks);
-        });
+
+var getAllResponse = fetch(tasksUrl,
+    {
+        method: 'get'
+    })
+    .then((response) => response.json())
+    .then((res) => {
+        allTasks = JSON.parse(JSON.stringify(res));
+        fillTaskListUl(allTasks);
+        AddEventListenersToIsDoneCheckboxes();
+    });
 }
 
 getAllTasks();
 
 var createNewTask = function createTask(newTask)
 {
-    return fetch(tasksUrl,
+    fetch(tasksUrl,
         {
             method: 'post',
             headers: {
@@ -37,23 +39,35 @@ function fillTaskListUl(tasksData) {
 
         var isDoneCheckBox = document.createElement("input");
         isDoneCheckBox.setAttribute("type", "checkbox");
-        //isDoneCheckBox.setAttribute('defaultValue', false);
-        isDoneCheckBox.setAttribute('id', tasksData[index].id);
-
-        if(tasksData[index].isDone === true)
-        {
-            isDoneCheckBox.setAttribute('disabled', true);
-            isDoneCheckBox.setAttribute('checked', true);
-        }
-        else
-        {
-            isDoneCheckBox.setAttribute('checked', false);
-        }
+        isDoneCheckBox.setAttribute('id', "isDoneCheckbox-" + tasksData[index].id);
+        isDoneCheckBox.checked = tasksData[index].isDone === true;
+        isDoneCheckBox.disabled = tasksData[index].isDone === true;
 
         listItem.appendChild(document.createTextNode(tasksData[index].taskName + " " + tasksData[index].taskDeadline));
         listItem.appendChild(isDoneCheckBox);
         taskList.appendChild(listItem);        
     }
+}
+
+function AddEventListenersToIsDoneCheckboxes() {
+    var isDoneCheckBoxes = document.querySelectorAll("input[type=checkbox]");
+
+    isDoneCheckBoxes.forEach(element => {
+        if(element.id.includes("isDoneCheckbox")) {
+            element.addEventListener('change', function(element)
+        {
+            if(this.checked)
+            {
+                var isAgreedToClose = confirm("Do you want to close the task");
+                if(isAgreedToClose) {
+                    //update
+                    updateIsDoneValue(this.id);
+                    location.reload(true);
+                }
+            }
+        });
+        }
+    });
 }
 
 var todayDealineButton = document.getElementById("todayButton");
@@ -153,3 +167,23 @@ function formatDate(date) {
     date = day + "/" + month + "/" + year;
     return date;
 }
+
+function updateIsDoneValue(id) {
+    var taskId = String(id).split('-').pop();
+
+    var task = ({
+        isDone: true
+    });
+
+    var options = {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(task)  
+    };
+    
+    fetch(tasksUrl + "/" + taskId, options)
+        .then((response) => response.json);       
+    
+};

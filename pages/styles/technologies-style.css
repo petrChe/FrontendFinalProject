@@ -2,6 +2,8 @@
     display: grid;
     grid-template-columns: 650px 450px;
     grid-template-rows: 50px 450px;
+    margin-left: 25px;
+    margin-top: 5px;
 }
 
 .introduction-text {
@@ -9,12 +11,32 @@
     grid-row: 1;
 }
 
-.table {
-    grid-column: 1;
-    grid-row:2;
-}
-
 .aside {
     grid-column: 2;
     grid-row: 1 / 2;
 }
+
+  .table {
+    grid-column: 1;
+    grid-row:2;
+    display: grid;
+    grid-template-columns: 400px 400px;
+    grid-gap: 10px;
+    background-color: #fff;
+    color: #444;
+  }
+  
+  .box {
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0, 0, 25px, 0;
+    font-size: 100%;
+    border: 1px solid gray;
+  }
+
+  .theader, .tfooter {
+      background: lightblue;
+      color: white;
+      text-align: center;
+      border: none;
+  }
