@@ -50,7 +50,7 @@ function setVideoEvents() {
 };
 
 var addVideoButton =  document.getElementsByClassName("addNewVideoButton")[0];
-addVideoButton.addEventListener("click", function(){
+addVideoButton.addEventListener("click", function(){    
     $.ajax({
         url:videoDirection,
         success: function (folderData) {
@@ -63,13 +63,17 @@ addVideoButton.addEventListener("click", function(){
                 newVideoElement.setAttribute("height", "180");
                 newVideoElement.controls = true;
                 newVideoElement.preload = "auto";
-
+                newVideoElement.name = count;
                 var videoSourceElement = document.createElement("source");
                 videoSourceElement.src = videoDirection + filename;
 
                 newVideoElement.appendChild(videoSourceElement);
                 newLiElement.appendChild(newVideoElement);
                 videoList.appendChild(newLiElement);
+
+                var newVideo = { id: count, name: videoDirection + filename, status: "stopped"};
+                videos.push(newVideo);
+                count++;
             });
         }
     });
