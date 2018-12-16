@@ -226,6 +226,49 @@ main {
     font-size: 3rem;
 }
 
+/*styles for video gallery*/
+
+.video-gallery {
+    width: 700px;
+    margin: 30px auto 0;
+    border-top: solid 1px gray;
+    border-bottom: solid 1px gray;
+}
+
+#content {
+    overflow: hidden;
+}
+
+.gallery-header {
+    text-align: center;
+    padding: 15px 0 15px 0;
+    font-size: 24px;
+}
+
+.gallery-footer {
+    text-align: center;
+    font-size: 24px;
+}
+
+.addNewVideoButton {
+    margin: 15px 0 15px 0;
+} 
+
+.gallery {
+    width: 828px;
+    margin: auto;
+}
+
+.gallery ul {
+    list-style: none;
+}
+
+.gallery li {
+    float: left;
+    margin:  10px;
+}
+
+
 /*footer*/
 #footer {
     bottom: 0;
